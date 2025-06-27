@@ -9,14 +9,13 @@ export default defineType({
             name: 'backgroundImages',
             title: 'Background Images',
             type: 'array',
-            of: [{ type: 'image', options: { hotspot: true } }],
+            of: [
+                {
+                    type: 'image',
+                    options: { hotspot: true }
+                }
+            ],
             validation: Rule => Rule.required().min(1)
-        }),
-        defineField({
-            name: 'description',
-            title: 'Description',
-            type: 'string',
-            description: 'คำบรรยายเกี่ยวกับภาพพื้นหลังที่เลือก'
         })
     ]
 })
