@@ -1,4 +1,4 @@
-import { defineType, defineField } from 'sanity';
+import { defineType, defineField } from 'sanity'
 
 export default defineType({
     name: 'mainBackground',
@@ -7,16 +7,16 @@ export default defineType({
     fields: [
         defineField({
             name: 'backgroundImages',
-            title: 'Background Image',
+            title: 'Background Images',
             type: 'array',
             of: [{ type: 'image', options: { hotspot: true } }],
-            validation: Rule => Rule.required() // ทำให้การเลือกภาพเป็นสิ่งที่จำเป็น
+            validation: Rule => Rule.required().min(1)
         }),
         defineField({
             name: 'description',
             title: 'Description',
             type: 'string',
-            description: 'คำบรรยายเกี่ยวกับภาพพื้นหลังที่เลือก',
-        }),
+            description: 'คำบรรยายเกี่ยวกับภาพพื้นหลังที่เลือก'
+        })
     ]
-});
+})
