@@ -8,10 +8,8 @@ export default defineType({
         defineField({
             name: 'backgroundImage',
             title: 'Background Image',
-            type: 'image',
-            options: {
-                hotspot: true, // ให้ผู้ใช้เลือกโซนโฟกัสของภาพ
-            },
+            type: 'array',
+            of: [{ type: 'image', options: { hotspot: true } }],
             validation: Rule => Rule.required() // ทำให้การเลือกภาพเป็นสิ่งที่จำเป็น
         }),
         defineField({
