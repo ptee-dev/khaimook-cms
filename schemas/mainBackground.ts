@@ -6,7 +6,7 @@ export default defineType({
     type: 'document',
     fields: [
         defineField({
-            name: 'backgroundImage',
+            name: 'backgroundImages',
             title: 'Background Image',
             type: 'array',
             of: [{ type: 'image', options: { hotspot: true } }],
